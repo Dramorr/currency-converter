@@ -1,0 +1,31 @@
+<div class="converter">
+  <div class="converter__item">
+    <custom-number-input
+      [ngModel]="first.value"
+      (output)="setFirstValue($event)"
+      ngDefaultControl
+    />
+    <custom-select
+      [options]="getCurrenciesCodeList()"
+      (output)="setFirstCurrency($event)"
+      defaultOption="UAH"
+    >
+    </custom-select>
+  </div>
+  <div class="converter__btn" (click)="swap($event)">
+    <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"></path></svg>
+  </div>
+  <div class="converter__item">
+    <custom-number-input
+      [ngModel]="second.value"
+      (output)="setSecondValue($event)"
+      ngDefaultControl
+    />
+    <custom-select
+      [options]="getCurrenciesCodeList()"
+      (output)="setSecondCurrency($event)"
+      defaultOption="UAH"
+    >
+    </custom-select>
+  </div>
+</div>

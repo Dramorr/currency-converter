@@ -1,0 +1,35 @@
+.converter{
+  display: flex;
+  align-items: center;
+  gap: 10px 25px;
+  &__item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__btn{
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+    & > svg{
+      fill: #fff;
+    }
+
+    transition: .2s;
+    &.swap{
+      transform: rotateY(180deg);
+    }
+  }
+}
+@media (max-width: 750px){
+  .converter{
+    flex-direction: column;
+    &__btn{
+      transform: rotate(90deg);
+      &.swap{
+        transform: rotate(270deg);
+      }
+    }
+  }
+}

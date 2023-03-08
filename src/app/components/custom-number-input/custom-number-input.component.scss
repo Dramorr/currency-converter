@@ -1,0 +1,19 @@
+.custom-input{
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid #0B0C10;
+  outline: none;
+
+  color: #fff;
+  background: #0B0C10;
+  
+  width: 200px;
+
+  text-align: center;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+}

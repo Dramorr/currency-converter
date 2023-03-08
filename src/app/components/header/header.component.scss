@@ -1,0 +1,29 @@
+.header{
+  position: relative;
+  border-bottom: 2px solid #0B0C10;
+  background: #0B0C10;
+  z-index: 10;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 0;
+  }
+  &__title{
+    font-size: 32px;
+    font-weight: 700;
+  }
+  &__list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 18px;
+    &-item{
+      & > span{
+        font-weight: 700;
+      }
+    }
+  }
+}

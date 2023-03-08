@@ -1,0 +1,73 @@
+.custom-select{
+  position: relative;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid #0B0C10;
+  outline: none;
+
+  color: #fff;
+  background: #0B0C10;
+
+  &__body{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    & svg{
+      fill: currentColor;
+      width: 15px;
+      transition: .3s;
+    }
+  }
+  &__list{
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    list-style: none;
+    margin: 0; padding: 0px;
+
+    width: fit-content;
+    min-width: 100%;
+    max-height: 200px;
+
+    opacity: 0;
+    overflow-y: scroll;
+
+    background: #0B0C10;
+    border-radius: 0 0 5px 5px;
+
+    pointer-events: none;
+
+    &::-webkit-scrollbar{
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background: #2e3c4d;
+      border-radius: 2px;
+      border: 1px solid #0B0C10;
+    }
+    &::-webkit-scrollbar-track{
+      background: #fff;
+      background: transparent;
+    }
+  }
+  &__option{
+    padding: 5px 10px;
+    cursor: pointer;
+    &:hover{
+      background: #2e3c4d;
+    }
+  }
+  &.open{
+    .custom-select__list{
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 100;
+    }
+    .custom-select__body > svg{
+      transform: rotateX(180deg);
+    }
+  }
+}
